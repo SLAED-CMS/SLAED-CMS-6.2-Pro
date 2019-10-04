@@ -1,11 +1,7 @@
 System: SLAED CMS 6.2 Pro
-
 Author: Eduard Laas
-
 Copyright © 2005 - 2019 SLAED
-
 License: GNU GPL 3
-
 Website: https://slaed.net
 
 # Минимальные требования
