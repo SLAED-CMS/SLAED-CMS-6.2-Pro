@@ -1,0 +1,20 @@
+<ul class="login-top">
+	<li class="dropdown">
+		<a OnClick="HideShow(&#039;a-form&#039;, &#039;puff&#039;, &#039;up&#039;, 500);" class="ico login-btn"><b>$arg[1]</b></a>
+		<form id="a-form" action="index.php?name=account" method="post" class="dropdown-form">
+			<ul class="login-form">
+				<li><input type="text" name="user_name" maxlength="25" class="sl_field" placeholder="$arg[2]" required></li>
+				<li><input type="password" name="user_password" maxlength="25" class="sl_field" placeholder="$arg[3]" required></li>
+				$arg[4]
+				<li><button type="submit" title="$arg[5]" class="sl_but">$arg[5]</button></li>
+				<li class="login-links">
+					<a href="index.php?name=account&amp;op=passlost" title="$arg[6]">$arg[6]</a>
+					<a href="index.php?name=account&amp;op=newuser" title="$arg[7]">$arg[7]</a>
+				</li>
+			</ul>
+			<input type="hidden" name="refer" value="1">
+			<input type="hidden" name="op" value="login">
+		</form>
+	</li>
+	<li><a href="index.php?name=account&amp;op=newuser" title="$arg[7]">$arg[7]</a></li>
+</ul>

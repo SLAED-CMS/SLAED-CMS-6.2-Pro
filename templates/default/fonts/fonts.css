@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Magistral';
+	src: url('magistralb-wf.eot');
+	src: url('magistralb-wf.eot?#iefix') format('embedded-opentype'),
+		url('magistralb-wf.woff') format('woff'),
+		url('magistralb-wf.ttf') format('truetype'),
+		url('magistralb-wf.svg#magistralcbold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Magistral';
+	src: url('magistralr-wf.eot');
+	src: url('magistralr-wf.eot?#iefix') format('embedded-opentype'),
+		url('magistralr-wf.woff') format('woff'),
+		url('magistralr-wf.ttf') format('truetype'),
+		url('magistralr-wf.svg#magistralcregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

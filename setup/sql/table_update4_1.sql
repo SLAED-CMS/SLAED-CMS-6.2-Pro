@@ -1,0 +1,1 @@
+ALTER TABLE `{pref}_rating` CHANGE `name` `uid` INT(11) NOT NULL DEFAULT '0';

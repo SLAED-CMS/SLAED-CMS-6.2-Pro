@@ -1,0 +1,10 @@
+<form action="$arg[1].php" method="post">
+	<div class="entborder">
+		<ul class="reset">
+			<li><span>$arg[2]:</span><div class="adm_login"><input type="text" name="name" maxlength="25" placeholder="$arg[2]" required></div><br></li>
+			<li><span>$arg[3]:</span><div class="adm_login"><input type="password" name="pwd" maxlength="25" placeholder="$arg[3]" required></div><br></li>
+			$arg[4]
+		</ul>
+	</div>
+	<div class="submit"><input type="hidden" name="op" value="check_admin"><input type="submit" value="$arg[5]"></div>
+</form>

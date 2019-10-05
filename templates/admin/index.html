@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+{%HEAD%}
+{%SCRIPT%}
+<script src="templates/$theme/js/tabs.js"></script>
+<script src="templates/$theme/js/jquery.metadata.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="wraptop"></div>
+		<div class="wrapmid">
+			<div class="header">
+				<div class="lcolomn leftside"><h1><a href="http://www.slaed.net" target="_blank" class="thide" title="SLAED CMS">SLAED CMS</a></h1></div>
+				<div class="rcolomn midside">
+					<div class="toolbar">
+						<div>
+							<ul class="reset">$lan[0]</ul>
+							<span class="rcolomn language">$lan[1]</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="vsep">
+				<div class="vsep">
+					<div class="container">
+						<div class="lcolomn leftside">$lan[2]</div>
+						<div class="rcolomn midside">{%MODULE%}</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="copyright">{%BLOCKS time%}<br>{%LICENSE%}</div>
+				<span><a OnClick="Upper('html, body', 600);" title="$lan[0]" class="thide">$lan[0]</a></span>
+			</div>
+		</div>
+		<div class="wrapfoot"></div>
+		{%BLOCKS variables%}
+	</div>
+</body>
+</html>

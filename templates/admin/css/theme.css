@@ -1,0 +1,359 @@
+/* Общие настройки страницы */
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, input { margin: 0; padding: 0; }
+
+legend { color:#207fb6; font-weight: bold; }
+fieldset {
+	padding: 3px;
+	margin: 0 0 3px 0;
+	overflow: auto;
+	border: 1px solid #dee0e2;
+	border-radius: 3px;
+}
+
+body { background: #c0deed url(../images/pagebg.jpg) repeat-x; }
+body, select, input, textarea, button { font: 11px/16px Tahoma, Arial, Verdana, sans-serif; color: #222; outline: none; }
+
+h1, h2, h3, h4, h5 { line-height: normal; }
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.5em; color: #207fb6; }
+h3 { font-size: 1.35em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1.1em; color: #207fb6; }
+
+/* Настройка ссылок */
+a { color: #0069a7; text-decoration: none; }
+a:hover { cursor: pointer; text-decoration: underline; }
+a img { border: 0 none; }
+
+/* Прочие стили */
+p { margin-bottom: 0.4em; }
+.clr { clear: both; }
+hr { border: 0 none; border-top: 1px solid #dee0e2; height: 1px; }
+ul { padding-left: 16px; list-style-position:outside; list-style-image:none; }
+ol { list-style-image: none; list-style-position: outside; list-style-type: decimal; margin-left: 2.2em; }
+
+input, textarea, select {
+	min-height: 18px;
+	background: #fafafa;
+	color: #777;
+	border: 1px #dee0e2 solid;
+	border-radius: 3px;
+}
+
+/* Подсветка текста */
+input[required]:valid, textarea[required]:valid { color: #008000; }
+input[required]:invalid, textarea[required]:invalid { color: #ff0000; }
+input[placeholder] { text-overflow: ellipsis; }
+
+input[type="radio"], input[type="checkbox"] { min-height: 0; margin: 0 2px 2px 0; vertical-align: middle; }
+input:focus, textarea:focus, select:focus { box-shadow: 0 0 3px #34c8ed; }
+input, textarea, select, a { outline: none; }
+select[multiple] { height: 100px; }
+
+/* Цитаты */
+blockquote {
+	background: #fff;
+	border-left: 1px solid #b8c3cd;
+	border-right: 1px solid #b8c3cd;
+	color: #798086;
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	margin: 4px;
+	padding: 4px;
+	border-radius: 8px;
+}
+blockquote:before {
+	color: #b8c3cd;
+	content: "\201C";
+	font-size: 3em;
+	line-height: 0.1em;
+	margin-right: 0.2em;
+	vertical-align: -.4em;
+}
+blockquote:after {
+	color: #b8c3cd;
+	content: "\201D";
+	font-size: 3em;
+	line-height: 0.1em;
+	margin-left: 0.1em;
+	vertical-align: -.4em;
+}
+blockquote > p:first-child { display: inline; }
+
+/* Скрытый текст */
+.hide { border-left: 1px solid #de6262; border-right: 1px solid #de6262; }
+.hide:before { color: #de6262; }
+.hide:after { color: #de6262; }
+
+/* Выделение кода */
+.code {
+	font-family: Verdana;
+	font-size: 11px;
+	color: #4848de;
+	background: #fff;
+	border-left: 1px solid #b8c3cd;
+	border-right: 1px solid #b8c3cd;
+	margin: 4px;
+	padding: 4px;
+	border-radius: 8px;
+}
+.code div { border-radius: 3px; }
+
+/* сброс настроек таблиц и списков */
+table.tabreset { border-collapse: collapse; border-spacing: 0; }
+.reset, .reset li { list-style: none; padding: 0; margin: 0; }
+
+/* Список */
+.list-text { width: 150px; list-style: none; text-align: left; padding: 0; margin: 0; }
+
+/* Размеры страницы */
+.wrapper { width: 994px; text-align: left; margin: 26px auto 27px auto; }
+
+/* Частовстречающиеся стили */
+.header h1, .lcolomn, .rcolomn, .toolbar ul { display: inline; }
+.lcolomn { float: left; }
+.rcolomn { float: right; }
+.thide { overflow: hidden; display: block; height: 0; }
+
+/* Окантовка и тень */
+/* Верх и низ */
+.wraptop, .wrapfoot { overflow: hidden; height: 22px; font: 1px/1px; background: url("../images/wraptop.png"); }
+.wrapfoot { background: url("../images/wrapfoot.png"); }
+
+/* Средняя часть */
+.wrapmid { background: url("../images/wrapmid.png") repeat-y; padding: 0 15px; }
+
+/* Шапка */
+.header { overflow: hidden; height: 72px; background: #fff url("../images/hsep.png") repeat-x 0 100%; }
+
+/* Логотип */
+.header h1 a { display: block; margin: 0 auto; width: 169px; padding-top: 51px; background: url("../images/slaedcms.png") no-repeat; }
+
+/* Меню и переключение языка */
+.toolbar { margin: 9px 10px 0 5px; }
+.toolbar, .toolbar div { height: 32px; overflow: hidden; background: url("../images/toolbar.png"); }
+.toolbar div { padding: 0 1px; background-position: 100% -32px; }
+.toolbar li { line-height: 29px; }
+.toolbar li, .toolbar li a, .toolbar li a b { float: left; height: 30px; }
+.toolbar li a b { cursor: pointer; padding: 0 11px; background: url("../images/topmenu.png") no-repeat; }
+.toolbar li a { background: url("../images/topmenu.png") no-repeat 100% -30px; }
+.toolbar li a:hover b { background-position: 0 -60px; }
+.toolbar li a:hover { color: #fff; background-color: #2f9cd9; background-position: 100% -90px; }
+
+/* Первый пункт меню */
+.toolbar li.sl_first a b { background-position: -9999px 0; }
+.toolbar li.sl_first a:hover b { background-position: 0 -120px; }
+
+/* Переключение языков */
+.language { padding: 7px 8px 0 0; }
+.language img { margin: 0 2px; }
+
+/* Выделение левой колонки */
+.vsep { width: 100%; background: #fff url("../images/vsepmid.png") repeat-y; }
+.vsep .vsep { padding-bottom: 15px; background: url("../images/vsepfoot.png") no-repeat 0 100%; }
+
+/* Структура из 2х колонок */
+.container, .leftside, .midside { overflow: visible; }
+.container, .header { padding-left: 237px; }
+.leftside { margin: 0 0 0 -237px; width: 214px; padding: 0 12px 0 11px; }
+.container .leftside { padding-top: 5px; background: url("../images/vseptop.png") no-repeat; }
+.midside { width: 100%; }
+.container .midside { padding-top: 8px; }
+
+/* Нижняя часть footer */
+.footer { overflow: hidden; height: 45px; margin: 0 -1px; background: url("../images/footer.png") repeat-x; }
+
+/* Копирайты footer */
+.copyright { display: inline; float: left; margin: 11px 0 0 15px; }
+.copyright, .copyright a { color: #fff; }
+
+/* Кнопка перемещения наверх */
+.footer span a.thide { margin-right: 10px; width: 42px; padding-top: 35px; float: right; background: url("../images/uppage.png") no-repeat; }
+.footer span a.thide:hover { background-position: 0 -35px; }
+
+/* Настройка оформления левых блоков */
+.leftside .block { margin-bottom: 12px; background-color: #fff; border: 1px solid #cbdae2; width: 212px; }
+
+/* Нижняя часть блока */
+.leftside .block .dbtm { font: 1px/1px; width: 214px; height: 5px; position: relative; margin: 0 -1px -1px -1px; background: url("../images/leftbdbtm.png") no-repeat; }
+
+/* Верхняя часть блока */
+.leftside .block h3 { cursor: pointer; overflow: hidden; font-size: 1em; margin: -1px -1px 0 -1px; width: 214px; height: 32px; position: relative; background: #33a1de url("../images/leftblocktop.png") no-repeat; color: #fff; }
+.leftside .block h3 b { display: block; margin: 10px 12px 0 12px; }
+.leftside .block h3:hover { background-position: 0 -32px; }
+
+/* Внутренняя часть блока */
+.leftside .block .dcont { margin: 0 11px; padding: 6px 0 4px 0; }
+
+/* Вертикальная навигация в блоке с использованием иконок */
+ul.nav li { padding: 1px 0; }
+ul.nav li img { vertical-align: middle; margin-right: 5px; }
+
+/* Настройка центральной информационной части */
+/* Заголовок центрального блока */
+.bchead { margin-bottom: 12px; cursor: pointer; font-size: 1em; line-height: 28px; text-transform: uppercase; color: #fff; text-align: center; }
+.bchead, .bchead b { display: block; height: 29px; background: #2991cc url("../images/bchead.png") no-repeat; }
+.bchead b { background: url("../images/bchead.png") no-repeat 100% -29px; }
+.bchead:hover { background-position: 0 -58px; }
+.bchead:hover b { background-position: 100% -87px; }
+
+/* Отступы по краям bpad */
+.bpad { margin: 0 12px; }
+.basecont .dcont { margin-bottom: 12px; }
+
+/* Разделительная полоса */
+.hsep { overflow: hidden; border-top: 1px solid #cfdadf; height: 14px; font: 1px/1px; background: url("../images/hsep.png") repeat-x; }
+
+/* Таблица иконок */
+.tableicons { width: 100%; }
+.tableicons td { width: 15%; padding: 9px 4px; vertical-align: top; text-align: center; }
+
+/* Шапка модуля */
+.headmodule { padding-left: 50px; }
+.headmodule .lcolomn { width: 50px; text-align: center; margin-left: -50px; }
+.headmodule .lcolomn img { width: 32px; }
+.headmodule .rcolomn { width: 100%; }
+.headmodule .rcolomn h1 { float: left; margin-top: 3px; font-size: 1.7em; color: #207fb6; }
+
+/* Поиск в модуле */
+.searchbox { float: right; background-color: #f1f6f9; padding: 6px; border-radius: 6px; }
+.searchbox .sl_but_blue { margin-top: 0; }
+
+/* Таблица поиска в модуле */
+.searchboxtab { width: 100%; }
+.searchboxtab tr { vertical-align: middle; }
+.searchboxtab td:first-child { text-align: left; }
+.searchboxtab td:last-child { text-align: right; }
+
+/* Меню с использованием вкладок */
+.tabmenu { padding: 0 2px; border-bottom: 1px solid #cbdae2; height: 26px; line-height: 26px; }
+.tabmenu li, .tabmenu li a, .tabmenu li b { float: left; height: 26px; }
+.tabmenu li a, .tabsubmenu li a { color: #676767; }
+.tabmenu li a, .tabmenu li b { background: url("../images/tabmenu.png") no-repeat 0 -54px; }
+.tabmenu li b, .tabsubmenu li a b { cursor: pointer; padding: 0 8px; background: url("../images/tabmenu.png") no-repeat 100% -80px; }
+.tabmenu li a:hover, .tabmenu li a.selected, .tabsubmenu li a:hover { color: #1e7bb2; }
+.tabmenu li a.selected { height: 27px; position: relative; background: url("../images/tabmenu.png") no-repeat; }
+.tabmenu li a.selected b { height: 27px; background: url("../images/tabmenu.png") no-repeat 100% -27px; }
+
+.tabsubmenu { padding: 4px; height: 21px; border: 1px solid #cbdae2; border-top-width: 0; background-color: #fff; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;}
+.tabsubmenu li, .tabsubmenu li a, .tabsubmenu li a b { float: left; height: 21px; }
+.tabsubmenu li a { line-height: 20px; }
+.tabsubmenu li a b { background: url("../images/tabsubmenu.png") no-repeat -999px 0; }
+.tabsubmenu li a.selected { color: #fff; background: #207fb6 url("../images/tabsubmenu.png") no-repeat; }
+.tabsubmenu li a.selected b { background-position: 100% -21px; }
+
+.tabcont { display:none; }
+@media print { .tabcont { display:block !important; } }
+
+.tabpad { padding: 10px 0 12px 0; }
+
+/* Скругление обьектов не для IE*/
+.entborder, .sl_warn, .sl_info, .sl_atten { border-radius: 6px; }
+
+/* Вход в админпанель */
+.slaenter { width: 399px; margin-top: 15%; }
+
+/* Окантовка и тень */
+/* Верх и низ */
+.slaenter .wraptop, .slaenter .wrapfoot { height: 17px; background: url("../images/wrapenter.png"); }
+.slaenter .wrapfoot { background-position: 0 -17px; }
+
+/*Текст в шапке*/
+.slaenter .header .midside { padding-top: 7px; color: #0069a7; }
+
+/* Средняя часть */
+.slaenter .wrapmid { background: url("../images/wrapmidenter.png") repeat-y; padding: 0 10px; }
+.entercont { background-color: #fff; padding: 0 15px 15px 15px; }
+
+/* Оформление формы входа */
+.entborder { border: 1px solid #dee0e2; padding: 10px; margin-bottom: 10px; }
+.entborder ul li br { line-height: 1px; font-size: 1px; clear: both; }
+.entborder ul li { padding: 1px 0 3px 160px; }
+.entborder ul li span { float: left; margin-left: -160px; padding-right: 10px; width: 150px; }
+.entborder ul li .adm_login { float: right; width: 100%; }
+.entborder ul li .adm_login input { float: left; width: 156px; padding: 2px; }
+
+/* Секретный код - Captcha */
+.entborder ul li .sl_s_capt { float: left; }
+.entborder ul li .sl_s_capt input { width: 156px; padding: 2px; }
+.entborder ul li .sl_k_capt { float: left; }
+.entborder ul li .sl_k_capt input { width: 156px; padding: 2px; }
+
+.submit { text-align: center; }
+.submit input { padding-bottom: 4px; color: #fff; font-weight: bold; cursor: pointer; border: 0 none; width: 80px; height: 29px; background: #2d99d5 url("../images/entersubmit.png"); }
+.submit input:hover { background-position: 0 -29px; }
+
+/* Нижняя часть */
+.slaenter .footer { height: 27px; background: #329ad4 url("../images/footer_ent.png") repeat-x; }
+.slaenter .footer .copyright { float: none; display: block; margin: 8px auto 0 auto; padding: 0; text-align: center; }
+
+/* Постраничная навигация, переключение страниц */
+.pagelink { position: relative; height: 40px; padding: 25px 60px 0 60px; border-top: 1px solid #ebebee; }
+.pager { padding-top: 5px; text-align: center; font-size: 18px; }
+.pager * { display: inline-block; height: 20px; line-height: 20px; padding: 5px; border-radius: 6px; }
+.pager a { color: #222; }
+.pager a:hover { background: #ebebee; text-decoration: none; }
+.pager span { background: #5ab8fd; color: #fff; }
+.pager span.sl_num_exit { background: none; color: #222; }
+.next-prev { display: inline; }
+.next-prev * { display: block; width: 40px; height: 40px; padding: 0; }
+.next-prev span { opacity: .4; }
+.next, .prev { width: 40px; height: 40px; position: absolute; top: 25px; }
+.next { right: 0; }
+.prev { left: 0; }
+.next .sl_num { background-position: -283px -105px; }
+.prev .sl_num { background-position: -243px -105px; }
+.next a.sl_num:hover { background-position: -283px -145px; }
+.prev a.sl_num:hover { background-position: -243px -145px; }
+
+.forum-foot .pagelink { float: left; border-top-width: 0; padding: 0; height: auto; } 
+.forum-foot .pager { float: left; padding-top: 0; text-align: left; font-size: 1.2em; }
+.forum-foot .next-prev { float: left; margin-left: 20px; }
+.forum-foot .next-prev * { display: block; width: 30px; height: 30px; }
+.forum-foot .next-prev span { opacity: .4; }
+.forum-foot .next, .forum-foot .prev { float: left; width: 30px; height: 30px; margin-left: 5px; position: static; top: auto; }
+.forum-foot .next { right: auto; }
+.forum-foot .prev { left: auto; }
+.forum-foot .next .sl_num { background-position: -273px -185px; }
+.forum-foot .prev .sl_num { background-position: -243px -185px; }
+.forum-foot .next a.sl_num:hover { background-position: -273px -215px; }
+.forum-foot .prev a.sl_num:hover { background-position: -243px -215px; }
+
+/* Опросы */
+/* Основное оформление опросов */
+.post-vote {
+	padding: 30px 15px;
+	height: 1%;
+	border-bottom: 1px solid #ebebee;
+	margin-top: -18px;
+	margin-bottom: 25px;
+}
+.post-vote .vote-links, .post-vote .vote-btns { display: inline-block; }
+.post-vote .vote-links { margin: 2px 0 0 20px; }
+
+/* Общее оформление */
+.vote-list { list-style: none; margin: 20px 0; padding: 0; }
+.vote-list li input { margin-right: 5px; }
+.vote-title { font-weight: bold; font-size: 1em; margin: 0 0 20px 0; }
+.vote-links { margin-top: 1em; margin-bottom: -8px; }
+.vote-links a { margin-right: 20px; }
+
+/* Результаты опроса - Оформление прогресс бара */
+.progress-line {
+	background: #e7e7eb;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	height: 6px;
+	width: 100%;
+	margin: 6px 0 12px 0;
+}
+.progress-line div { height: 4px; border-radius: 2px; text-indent: -9999px; overflow: hidden; }
+.progress-1 div { border: 1px solid #0078a5; background-color: #5c9ade; background: linear-gradient(to top, #00adee 10%, #0078a5 90%); }
+.progress-2 div { border: 1px solid #5c9425; background-color: #77af3f; background: linear-gradient(to top, #8fc857 10%, #5c9425 90%); }
+.progress-3 div { border: 1px solid #f47a20; background-color: #faa51a; background: linear-gradient(to top, #faa51a 10%, #f47a20 90%); }
+.progress-4 div { border: 1px solid #a92c2c; background-color: #c44747; background: linear-gradient(to top, #dd5f5f 10%, #a92c2c 90%); }
+.progress-5 div { border: 1px solid #8c2ca9; background-color: #9b36b9; background: linear-gradient(to top, #bf5fdd 10%, #8c2ca9 90%); }
+.progress-info:after { content: ""; clear: both; display: block; }
+.progress-info span { float: left; }
+.progress-info .pull-right { float: right; color: #6e7c8b; }
+.progress-info b { font-weight: normal; }

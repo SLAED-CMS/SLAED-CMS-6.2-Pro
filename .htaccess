@@ -1,0 +1,102 @@
+# Author: Eduard Laas
+# Copyright © 2005 - 2017 SLAED
+# License: GNU GPL 3
+# Website: slaed.net
+
+# Default charset
+AddDefaultCharset utf-8
+
+# Errors
+ErrorDocument 400																											https://slaed.net/pages.html
+ErrorDocument 401																											https://slaed.net/faq.html
+ErrorDocument 403																											https://slaed.net/files.html
+ErrorDocument 404																											https://slaed.net/news.html
+ErrorDocument 500																											https://slaed.net/forum.html
+ErrorDocument 503																											https://slaed.net/links.html
+
+# Security, warning: This feature has been DEPRECATED as of PHP 5.3.0 and REMOVED as of PHP 5.4.0
+# php_flag register_globals off
+# php_flag safe_mode on
+# php_flag magic_quotes_gpc on
+
+# Deflate compression and expires by mime type
+# <IfModule mod_deflate.c>
+# <FilesMatch "\.(js|jpg|jpeg|gif|png|css)$">
+# ExpiresActive On
+# ExpiresDefault "access plus 1 month"
+# SetOutputFilter DEFLATE
+# </FilesMatch>
+# </IfModule>
+
+# Mod rewrite on
+RewriteEngine On
+RewriteBase /
+
+# Redirecting to https
+# RewriteCond %{HTTPS} off
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Redirecting non-www to www
+# RewriteCond %{HTTP_HOST}																							^[^.]+\.[^.]+$
+# RewriteCond %{HTTPS}s																								^on(s)|
+# RewriteRule ^																												http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Index
+RewriteRule ^index.html$																									index.php [N]
+
+# All standart moduls and RSS
+RewriteRule ^rss-num-([0-9]*).html$																					index.php?go=rss&num=$1 [NC]
+RewriteRule ^rss-([a-zA-Z0-9_]+)-num-([0-9]*).html$															index.php?go=rss&name=$1&num=$2 [NC]
+RewriteRule ^rss-([a-zA-Z0-9_]+)-id-([0-9]*).html$																index.php?go=rss&name=$1&id=$2 [NC]
+RewriteRule ^rss-([a-zA-Z0-9_]+)-([0-9]*)-num-([0-9]*).html$												index.php?go=rss&name=$1&cat=$2&num=$3 [NC]
+RewriteRule ^rss-([a-zA-Z0-9_]+)-([0-9]*).html$																	index.php?go=rss&name=$1&cat=$2 [NC]
+RewriteRule ^rss-([a-zA-Z0-9_]+).html$																				index.php?go=rss&name=$1 [NC]
+RewriteRule ^rss.html$																										index.php?go=rss [NC]
+RewriteRule ^open-search.html$																							index.php?go=search [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-clients.html$																			index.php?name=$1&op=clients [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-partners.html$																		index.php?name=$1&op=partners [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-edithome.html$																		index.php?name=$1&op=edithome [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-logout-refer.html$																	index.php?name=$1&op=logout&refer=1 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-logout.html$																			index.php?name=$1&op=logout [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-newuser.html$																		index.php?name=$1&op=newuser [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-passlost.html$																		index.php?name=$1&op=passlost [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-privat.html$																			index.php?name=$1&op=privat [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-privat-(.*).html$																	index.php?name=$1&op=privat&uname=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-favorites.html$																		index.php?name=$1&op=favorites [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-info-(.*).html$																		index.php?name=$1&op=view&uname=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-rech-([0-9]*).html$																index.php?name=$1&op=rech&id=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-avatar-(.*).html$																	index.php?name=$1&op=saveavatar&avatar=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-view-([0-9]*)-([0-9]*)-([0-9]*).html$										index.php?name=$1&op=view&id=$2&pag=$3&num=$4 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-view-([0-9]*)-([0-9]*).html$													index.php?name=$1&op=view&id=$2&num=$3 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-view-([0-9]*)-word-(.*).html$													index.php?name=$1&op=view&id=$2&word=$3 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-view-([0-9]*)-last.html$															index.php?name=$1&op=view&id=$2&last [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-view-([0-9]*).html$																index.php?name=$1&op=view&id=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-broken-([0-9]*).html$															index.php?name=$1&op=broken&id=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-let-(.*)-([0-9]*).html$															index.php?name=$1&op=liste&let=$2&num=$3 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-let-(.*).html$																		index.php?name=$1&op=liste&let=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-list-([0-9]*).html$																	index.php?name=$1&op=liste&num=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-list.html$																				index.php?name=$1&op=liste [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-kasse.html$																			index.php?name=$1&op=kasse [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-add-([0-9]*)-0-([0-9]*)-([0-9]*).html$									index.php?name=$1&op=add&cat=$2&id=0&pid=$3&qid=$4 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-add-([0-9]*)-([0-9]*)-([0-9]*).html$										index.php?name=$1&op=add&cat=$2&id=$3&pid=$4 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-add-([0-9]*)-0-([0-9]*).html$													index.php?name=$1&op=add&cat=$2&id=0&pid=$3 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-add-([0-9]*).html$																index.php?name=$1&op=add&cat=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-add.html$																				index.php?name=$1&op=add [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-delete-([0-9]*)-([0-9]*).html$												index.php?name=$1&op=delete&cat=$2&id=$3 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-sort-([0-9]*)-([0-9]*).html$													index.php?name=$1&sort=$2&num=$3 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-sort-([0-9]*).html$																index.php?name=$1&sort=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-cat-([0-9]*)-word-(.*).html$													index.php?name=$1&cat=$2&word=$3 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-cat-([0-9]*)-sort-([0-9]*)-([0-9]*).html$									index.php?name=$1&cat=$2&sort=$3&num=$4 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-cat-([0-9]*)-sort-([0-9]*).html$												index.php?name=$1&cat=$2&sort=$3 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-cat-([0-9]*)-([0-9]*).html$													index.php?name=$1&cat=$2&num=$3 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-cat-([0-9]*).html$																	index.php?name=$1&cat=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-word-(.*).html$																		index.php?name=$1&word=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-([0-9]*).html$																		index.php?name=$1&num=$2 [NC]
+# RewriteRule ^([a-zA-Z0-9_]+)-([a-zA-Z0-9_]+)-atime-(.*)-dtime-(.*)-word-(.*)-([0-9]*).html$	index.php?name=$1&mod=$2&atime=$3&dtime=$4&word=$5&num=$6 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-([a-zA-Z0-9_]+)-word-(.*)-([0-9]*)-([0-9]*).html$					index.php?name=$1&mod=$2&word=$3&typ=$4&num=$5 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-([a-zA-Z0-9_]+)-word-(.*)-([0-9]*).html$									index.php?name=$1&mod=$2&word=$3&num=$4 [NC]
+RewriteRule ^([a-zA-Z0-9_]+)-([a-zA-Z0-9_]+).html$															index.php?name=$1&mod=$2 [NC]
+RewriteRule ^([a-zA-Z0-9_]+).html																						index.php?name=$1 [NC]
+
+# HTTP Authentication
+RewriteRule .*																													- [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]

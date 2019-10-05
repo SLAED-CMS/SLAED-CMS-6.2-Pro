@@ -1,0 +1,884 @@
+/* Подлючение плагинов системы */
+/* jQuery Uploadify - Загрузка файлов */
+@import url(../../../plugins/uploadify/uploadify.css);
+
+/* Syntaxhighlighter - Подсветка кода */
+@import url(../../../plugins/syntaxhighlighter/styles/shCore.css);
+@import url(../../../plugins/syntaxhighlighter/styles/shThemeDefault.css);
+
+/* jQuery UI Autocomplete - Автодополнение */
+.ui-autocomplete { max-height: 250px; overflow-y: auto; overflow-x: hidden; }
+
+/* Общие стили системы */
+/* Стиль 50 процентного белого фона */
+.sl_hidden { opacity: 0.5; }
+.sl_hidden.sl_but:hover { cursor: not-allowed; opacity: 0.5; }
+
+/* Скрытие отображения объекта */
+.sl_none { display: none; }
+
+/* Заметка/Уведомление */
+.sl_note { cursor: help; }
+
+/* Системные цвета */
+.sl_red { color: #ff0000; }
+.sl_orange { color: #ff5500; }
+.sl_green { color: #008000; }
+.sl_blue { color: #0000ff; }
+
+/* Вспомогательный текст */
+.sl_small { margin: 10px; font-size: .9em; text-align: justify; }
+
+/* Системные переменные отладки */
+.sl_sys_var { font-size: .9em; }
+
+/* Компоненты вывода материала в модулях */
+.sl_coms:before, .sl_views:before, .sl_modul:before, .sl_date:before, .sl_cat:before, .sl_faq:before, .sl_last:before, .sl_hits:before, .sl_outs:before, .sl_down:before, .sl_ed2k:before, .sl_http:before, .sl_plus:before, .sl_shop_add:before, .sl_shop_kasse:before, .sl_shop_plus:before, .sl_shop_minus:before, .sl_shop_total:before, .sl_post:before, .sl_votes:before, .sl_favor:before, .sl_f_new:before, .sl_f_old:before, .sl_f_clos:before, .sl_f_last:before, .sl_t_post:before, .sl_t_edit:before, .sl_t_new:before, .sl_t_old:before, .sl_t_pop:before, .sl_t_pold:before, .sl_t_announ:before, .sl_t_hot:before, .sl_t_clos_m:before, .sl_t_clos_a:before, .sl_t_clos_n:before, .sl_t_clos_p:before, .sl_n_day:before, .sl_n_days:before, .sl_n_week:before, .sl_n_act:before, .sl_n_deact:before, .sl_n_info:before, .sl_m_in:before, .sl_m_out:before, .sl_m_save:before { display: inline-block; background-image: url(../images/misc/sprite.png); vertical-align: middle; content: ""; }
+
+/* Комментарии */
+.sl_coms:before { width: 14px; height: 11px; background-position: -297px -26px; margin: -3px 6px 0 0; }
+.sl_coms:hover { opacity: 0.8; }
+
+/* Просмотры */
+.sl_views:before { width: 14px; height: 10px; background-position: -73px 0; margin: -3px 6px 0 0; }
+
+/* Модуль */
+.sl_modul:before { width: 14px; height: 10px; background-position: -73px 0; margin: -3px 6px 0 0; }
+
+/* Дата */
+.sl_date:before { width: 14px; height: 14px; background-position: -238px -34px; margin: -4px 7px 0 0; }
+
+/* Категории */
+.sl_cat:before { width: 10px; height: 11px; background-position: -63px 0; margin: -3px 6px 0 0; }
+
+/* Вопросы и ответы */
+.sl_faq:before { width: 10px; height: 11px; background-position: -63px 0; margin: -3px 6px 0 0; }
+
+/* Последнии новости */
+.sl_last:before { width: 10px; height: 11px; background-position: -63px 0; margin: -3px 6px 0 0; }
+
+/* Входы */
+.sl_hits:before { width: 14px; height: 10px; background-position: -73px 0; margin: -3px 6px 0 0; }
+
+/* Выходы */
+.sl_outs:before { width: 10px; height: 11px; background-position: -63px 0; margin: -3px 6px 0 0; }
+
+/* Скачали */
+.sl_down:before { width: 10px; height: 11px; background-position: -63px 0; margin: -3px 6px 0 0; }
+
+/* Ссылки eMule/eDonkey */
+.sl_ed2k:before { width: 14px; height: 10px; background-position: -73px 0; margin: -3px 6px 0 0; }
+
+/* Ссылки обычные */
+.sl_http:before { width: 10px; height: 11px; background-position: -63px 0; margin: -3px 6px 0 0; }
+
+/* Открыть поле */
+.sl_plus:before { width: 10px; height: 10px; background-position: -351px -16px; margin: -3px 6px 0 0; }
+
+/* Добавить в корзину магазина */
+.sl_shop_add:before { width: 10px; height: 10px; background-position: -351px -16px; margin: -3px 6px 0 0; }
+
+/* Оформить заказ в магазине */
+.sl_shop_kasse:before { width: 12px; height: 10px; background-position: -297px -16px; margin: -3px 6px 0 0; }
+
+/* Плюс - Изменить количество продукта в корзине магазина */
+.sl_shop_plus:before { width: 10px; height: 10px; background-position: -351px -16px; margin: -3px 6px 0 0; }
+
+/* Минус - Изменить количество продукта в корзине магазина */
+.sl_shop_minus:before { width: 10px; height: 2px; background-position: -351px -20px; margin: -3px 6px 0 0; }
+
+/* Общая сумма в корзине магазина */
+.sl_shop_total:before { width: 10px; height: 11px; background-position: -63px 0; margin: -3px 6px 0 0; }
+
+/* Автор */
+.sl_post:before { width: 12px; height: 10px; background-position: -297px -16px; margin: -3px 6px 0 0; }
+
+/* Голосов */
+.sl_votes:before { width: 12px; height: 10px; background-position: -297px -16px; margin: -3px 6px 0 0; }
+
+/* Магазин - Новая цена */
+.sl_shop_price { font-size: 28px; margin-bottom: 10px; }
+
+/* Магазин - Старая цена */
+.sl_shop_oprice { font-size: 24px; text-decoration: line-through; margin-bottom: 10px; }
+
+/* Магазин - Скидка */
+.sl_shop_discount { font-size: 22px; margin-bottom: 10px; }
+
+/* Фавориты */
+.sl_favor { font-size: .9em; color: #6e7c8b; cursor: pointer; }
+.sl_favor:before { margin: -2px 6px 0 0; width: 25px; height: 25px; background-position: -158px -171px; }
+.sl_favor:hover:before { background-position: -133px -171px; }
+.sl_favor_on:before { background-position: -183px -171px !important; }
+.sl_favor_off:before { background-position: -208px -171px !important; }
+
+/* Оформление изображений форума */
+/* Есть новые сообщения */
+.sl_f_new:before { width: 32px; height: 32px; background-position: -286px -40px; margin: -3px 6px 0 0; }
+
+/* Нет новых сообщений */
+.sl_f_old:before { width: 32px; height: 32px; background-position: -318px -40px; margin: -3px 6px 0 0; }
+
+/* Форум закрыт */
+.sl_f_clos:before { width: 32px; height: 32px; background-position: -350px -40px; margin: -3px 6px 0 0; }
+
+/* Последнее сообщение */
+.sl_f_last:before { width: 14px; height: 11px; background-position: -297px -26px; margin: -3px 6px 0 0; }
+.sl_f_last:hover { opacity: 0.8; }
+
+/* Дата добавления сообщения */
+.sl_t_post:before { width: 7px; height: 9px; background-position: -95px 0px; margin: -2px 3px 0 0; }
+
+/* Дата редактирования сообщения */
+.sl_t_edit:before { width: 8px; height: 9px; background-position: -87px 0px; margin: -2px 3px 0 6px; }
+
+/* Есть новые сообщения */
+.sl_t_new:before { width: 16px; height: 16px; background-position: -256px -72px; margin: -3px 6px 0 0; }
+
+/* Нет новых сообщений */
+.sl_t_old:before { width: 16px; height: 16px; background-position: -272px -72px; margin: -3px 6px 0 0; }
+
+/* Популярная тема имеет новые сообщения */
+.sl_t_pop:before { width: 16px; height: 16px; background-position: -288px -72px; margin: -3px 6px 0 0; }
+
+/* Популярная тема нет новых сообщений */
+.sl_t_pold:before { width: 16px; height: 16px; background-position: -304px -72px; margin: -3px 6px 0 0; }
+
+/* Объявление */
+.sl_t_announ:before { width: 16px; height: 16px; background-position: -320px -72px; margin: -3px 6px 0 0; }
+
+/* Важная тема */
+.sl_t_hot:before { width: 16px; height: 16px; background-position: -256px -88px; margin: -3px 6px 0 0; }
+
+/* Тема закрыта, требует проверки */
+.sl_t_clos_m:before { width: 16px; height: 16px; background-position: -272px -88px; margin: -3px 6px 0 0; }
+
+/* Тема закрыта */
+.sl_t_clos_a:before { width: 16px; height: 16px; background-position: -288px -88px; margin: -3px 6px 0 0; }
+
+/* Тема закрыта для публикаций */
+.sl_t_clos_n:before { width: 16px; height: 16px; background-position: -304px -88px; margin: -3px 6px 0 0; }
+
+/* Запрограммированная тема */
+.sl_t_clos_p:before { width: 16px; height: 16px; background-position: -320px -88px; margin: -3px 6px 0 0; }
+
+/* Добавлен сегодня */
+.sl_n_day:before { cursor: help; width: 16px; height: 16px; background-position: -336px -72px; margin: -3px 6px 0 0; }
+
+/* Добавлен за последние 3 дня */
+.sl_n_days:before { cursor: help; width: 16px; height: 16px; background-position: -352px -72px; margin: -3px 6px 0 0; }
+
+/* Добавлен за последнюю неделю */
+.sl_n_week:before { cursor: help; width: 16px; height: 16px; background-position: -368px -72px; margin: -3px 6px 0 0; }
+
+/* Активирован */
+.sl_n_act:before { cursor: help; width: 16px; height: 16px; background-position: -384px -72px; margin: -3px 6px 0 0; }
+
+/* Деактивирован */
+.sl_n_deact:before { cursor: help; width: 16px; height: 16px; background-position: -336px -72px; margin: -3px 6px 0 0; }
+
+/* Информация */
+.sl_n_info:before { cursor: pointer; width: 16px; height: 16px; background-position: -384px -72px; margin: -3px 6px 0 0; }
+.sl_n_info:hover { opacity: 0.8; }
+
+/* Входящие сообщения */
+.sl_m_in:before { width: 16px; height: 16px; background-position: -256px -72px; margin: -3px 6px 0 0; }
+
+/* Исходящие сообщения */
+.sl_m_out:before { width: 16px; height: 16px; background-position: -256px -88px; margin: -3px 6px 0 0; }
+
+/* Сохраненные сообщения */
+.sl_m_save:before { width: 16px; height: 16px; background-position: -320px -88px; margin: -3px 6px 0 0; }
+
+/* Изображения категорий в материалах */
+.sl_icat {
+	padding: 10px;
+	margin: 0 0 10px 10px;
+	border: 1px solid #ebebee;
+	border-radius: 4px;
+	float: right;
+}
+
+/* Общие категории */
+.sl_categ {
+	width: 235px;
+	height: 90px;
+	padding: 5px;
+	margin: 0 10px 10px 0;
+	border: 1px solid #ebebee;
+	border-radius: 4px;
+	float: right;
+}
+
+/* Geo IP флаг */
+.sl_flag {
+	cursor: help;
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	margin: -3px 3px 0 0;
+}
+
+/* Нумерация постов форума, комментариев, списка */
+.sl_pnum {
+	float: left;
+	border-radius: 10px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 8px;
+	margin-left: 10px;
+	background-color: #b8c3cd;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none !important;
+	font-size: 12px;
+}
+a.sl_pnum:hover { background-color: #5ab8fd; }
+
+/* Кнопки */
+/* Общее оформление */
+.sl_but, .sl_but_blue, .sl_but_red, .sl_but_green, .sl_but_read, .sl_but_navi, .sl_but_foot, .sl_but_back {
+	border-radius: 15px;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+	padding: 5px 15px;
+	margin: 0 3px 0 0;
+	line-height: 20px;
+	height: 30px;
+	border: 0 none;
+	text-decoration: none !important;
+	cursor: pointer; 
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1), inset 0 -1px 0 0 rgba(0,0,0,0.1);
+	transition: opacity .2s ease;
+	box-sizing: border-box;
+}
+
+.sl_but:hover, .sl_but_blue:hover, .sl_but_red:hover, .sl_but_green:hover { opacity: 0.8; }
+.sl_but:active, .sl_but_blue:active, .sl_but_red:active, .sl_but_green:active { box-shadow: inset 0 1px 4px 0 rgba(0,0,0,0.2); opacity: 1; }
+
+/* Кнопка обычная */
+.sl_but { color: #2a303c; text-shadow: 0 1px 0 #fff; background-color: #eaeef2; background: linear-gradient(to top, #eef1f5 0%, #d5dce3 100%); }
+
+/* Кнопка синяя */
+.sl_but_blue { color: #fff; text-shadow: 0 1px 0 rgba(0,0,0,0.1); background-color: #72c0f9; background: linear-gradient(to top, #78c6fb 0%, #6dbaf7 100%); }
+
+/* Кнопка красная */
+.sl_but_red { color: #fff; text-shadow: 0 1px 0 rgba(0,0,0,0.1); background-color: #f97272; background: linear-gradient(to top, #fb7878 0%, #f76d6d 100%); }
+
+/* Кнопка зелёная */
+.sl_but_green { color: #fff; text-shadow: 0 1px 0 rgba(0,0,0,0.1); background-color: #a4d682; background: linear-gradient(to top, #9fd779 0%, #96d26d 100%); }
+
+/* Кнопка просмотра пустая */
+.sl_but_read {
+	text-shadow: none;
+	background-color: #fff;
+	border: 1px solid #ebebee;
+	padding: 4px 14px;
+	color: #30a2f6;
+	box-shadow: none;
+}
+.sl_but_read:hover { opacity: 1; border-color: #d9d9dc; }
+
+/* Кнопка навигации пустая */
+.sl_but_navi {
+	text-shadow: none;
+	background-color: #fff;
+	border: 1px solid #ebebee;
+	padding: 4px 14px;
+	color: #30a2f6;
+	box-shadow: none;
+}
+.sl_but_navi:hover { opacity: 1; border-color: #d9d9dc; }
+
+/* Кнопка нижней навигации пустая */
+.sl_but_foot {
+	text-shadow: none;
+	background-color: #f2f4f7;
+	border: 1px solid #ebebee;
+	padding: 4px 14px;
+	color: #2a303c;
+	box-shadow: none;
+}
+.sl_but_foot:hover { opacity: 1; border-color: #d9d9dc; }
+
+/* Кнопка назад пустая */
+.sl_but_back {
+	text-shadow: none;
+	background-color: #fff;
+	border: 1px solid #ebebee;
+	padding: 4px 14px;
+	color: #30a2f6;
+	box-shadow: none;
+}
+.sl_but_back:hover { opacity: 1; border-color: #d9d9dc; }
+
+/* BB Редактор */
+.sl_bb-editor { margin-bottom: 20px; }
+.sl_bb-editor textarea {
+	display: block;
+	resize: vertical;
+	min-height: 100px;
+	width: 100%;
+	margin: 0 0 3px 0;
+	box-sizing: border-box;
+}
+.sl_bbup-panel {
+	background: #f9f9f9;
+	border: 1px solid #dee0e2;
+	border-radius: 4px;
+	padding: 5px;
+	height: 1%;
+	margin: 0 0 3px 0;
+}
+.sl_bbup-panel:after { display: block; content: ""; clear: both; }
+.sl_bb-panel {
+	background: #f9f9f9;
+	border: 1px solid #dee0e2;
+	border-radius: 4px;
+	padding: 5px;
+	height: 1%;
+	margin: 0 0 3px 0;
+}
+.sl_bb-panel:after { display: block; content: ""; clear: both; }
+.sl_bb-panel span {
+	float: left;
+	border-radius: 2px;
+	width: 24px; height: 24px;
+	margin: 0; padding: 0;
+	border: 0 none;
+	cursor: pointer;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url(../images/editor/bb-editor.png);
+}
+.sl_bb-panel span:hover, .sl_bb-panel .open span { background-color: #fff; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2); }
+.sl_bb-panel span:active { box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.2); background-color: #f2f2f2; }
+.sl_bb_sep { float: left; height: 24px; width: 1px; background-color: #e1e2e4; overflow: hidden; margin: 0 5px; }
+.sl_bb_select { float: left; border: 1px solid #dee0e2; height: 24px; padding: 3px; font-size: 13px; }
+.sl_bb-panel .sl_drop { float: left; }
+.sl_bb-panel .sl_drop-form ul { list-style: none; padding: 0; margin: 0; }
+.sl_bb-panel .sl_drop-form select { width: 150px; margin: 2px; font-size: 13px; }
+
+/* Стили BB кнопок */
+.sl_bb_b { background-position: 0 0; }
+.sl_bb_i { background-position: -24px 0; }
+.sl_bb_u { background-position: -48px 0; }
+.sl_bb_s { background-position: -72px 0; }
+.sl_bb_li { background-position: -96px 0; }
+.sl_bb_hr { background-position: -120px 0; }
+.sl_bb_left { background-position: -144px 0; }
+.sl_bb_center { background-position: -168px 0; }
+.sl_bb_right { background-position: -192px 0; }
+.sl_bb_justify { background-position: -216px 0; }
+.sl_bb_hide { background-position: -240px 0; }
+.sl_bb_link { background-position: -264px 0; }
+.sl_bb_mail { background-position: -288px 0; }
+.sl_bb_img { background-position: -312px 0; }
+.sl_bb_media { background-position: -336px 0; }
+.sl_bb_quote { background-position: -360px 0; }
+.sl_bb_spoiler { background-position: -384px 0; }
+.sl_bb_plus { background-position: -432px 0; }
+.sl_bb_minus { background-position: -408px 0; }
+.sl_bb_file { background-position: 0 -24px; }
+.sl_bb_smile { background-position: -24px -24px; }
+.sl_bb_translate { background-position: -48px -24px; }
+.sl_bb_trans { background-position: -72px -24px; }
+.sl_bb_text { background-position: -96px -24px; }
+.sl_bb_html { background-position: -120px -24px; }
+.sl_bb_php { background-position: -144px -24px; }
+.sl_bb_break { background-position: -168px -24px; }
+.sl_bb_info { background-position: -192px -24px; }
+.sl_bb_translit { background-position: -216px -24px; }
+.sl_bb_code { background-position: -240px -24px; }
+
+/* Формы и поля */
+/* Общие */
+.sl_field {
+	border-radius: 3px;
+	display: inline-block;
+	height: 18px;
+	line-height: 18px;
+	padding: 3px 6px;
+	vertical-align: middle;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+textarea.sl_field { height: auto; resize: vertical; }
+.sl_field:focus { border-color: #80b7e0; box-shadow: 0 1px 1px rgba(0,0,0,0.075) inset; outline: none; }
+
+/* Select */
+select.sl_field, input[type="file"].sl_field { height: 26px; line-height: 26px; }
+select.sl_field { background-color: #fff; border: 1px solid #ccc; }
+select[multiple].sl_field, select[size].sl_field { height: auto; }
+
+/* Оформление label в optgroup */
+.sl_label { font-weight: bold; }
+
+/* Поля форм в модулях */
+.sl_mod_auto_links, .sl_mod_contact, .sl_mod_faq, .sl_mod_files, .sl_mod_forum, .sl_mod_help, .sl_mod_jokes, .sl_mod_links, .sl_mod_media, .sl_mod_money, .sl_mod_news, .sl_mod_order, .sl_mod_pages, .sl_mod_recommend, .sl_mod_voting, .sl_mod_whois { width: 570px; }
+select.sl_mod_auto_links, select.sl_mod_contact, select.sl_mod_faq, select.sl_mod_files, select.sl_mod_forum, select.sl_mod_help, select.sl_mod_jokes, select.sl_mod_links, select.sl_mod_media, select.sl_mod_money, select.sl_mod_news, select.sl_mod_order, select.sl_mod_pages, select.sl_mod_recommend, select.sl_mod_voting, select.sl_mod_whois { width: 584px; }
+
+.sl_mod_account, .sl_mod_rss_info, .sl_mod_whois { width: 440px; }
+select.sl_mod_account, select.sl_mod_rss_info, select.sl_mod_whois { width: 454px; }
+
+.sl_mod_shop, .sl_mod_money { width: 535px; }
+select.sl_mod_shop, select.sl_mod_money { width: 549px; }
+
+.sl_mod_search { width: 490px; }
+select.sl_mod_search { width: 504px; }
+
+/* Поля форм в блоках */
+.sl_bl_field { width: 148px; }
+
+/* Оформления таблиц */
+/* Таблица просмотра загруженных файлов и переводчика в редакторе */
+.sl_table_ajax { width: 100%; margin-bottom: 40px; border-collapse: collapse; border-spacing: 0; }
+.sl_table_ajax_head th {
+	padding: 13px 15px 10px 15px;
+	background-color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	white-space: nowrap;
+}
+.sl_table_ajax_head th a { color: #223345; }
+.sl_table_ajax_head th:first-child { text-align: left; border-radius: 8px 0 0 0; }
+.sl_table_ajax_head th:last-child { text-align: right; border-radius: 0 8px 0 0; }
+.sl_table_ajax_body td { border-bottom: 1px solid #fff; padding: 5px; }
+.sl_table_form .sl_table_ajax_body td:first-child { width: 35px; text-align: left;}
+.sl_table_ajax_body td:last-child { float: right; }
+.sl_table_ajax_body tr:hover { background-color: #fff; }
+
+/* Таблица автоматического перевода текста в редакторе */
+.sl_bb_trans { width: 100%; border-collapse: collapse; border-spacing: 0; }
+.sl_bb_trans tr:first-child { border-bottom: 1px solid #e7e7eb; }
+.sl_bb_trans td:first-child { border-left: 0; }
+.sl_bb_trans td { padding: 4px; text-align: center; border-left: 1px solid #e7e7eb; }
+
+/* Tablesorter - Сортировка таблиц списка */
+thead tr .sl_sort { background-image: url(../images/misc/bg.gif); background-repeat: no-repeat; background-position: center right; cursor: pointer; }
+thead tr .sl_sort_asc { background-image: url(../images/misc/asc.gif); opacity: 0.5; }
+thead tr .sl_sort_desc { background-image: url(../images/misc/desc.gif); opacity: 0.5; }
+
+/* Таблицы списка */
+.sl_table_list, .sl_table_list_sort { width: 100%; margin-bottom: 40px; border-collapse: collapse; border-spacing: 0; }
+.sl_table_list_sort td:first-child { text-align: left; }
+.sl_table_list_sort td:last-child { text-align: right; }
+.sl_table_list_head th {
+	padding: 13px 15px 10px 15px;
+	background-color: #f1f3f5;
+	border-bottom: 1px solid #e7e7eb;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	white-space: nowrap;
+}
+.sl_table_list_head th a { color: #223345; }
+.sl_table_list_head th:first-child { text-align: left; border-radius: 8px 0 0 0; }
+.sl_table_list_head th:last-child { text-align: left; border-radius: 0 8px 0 0; }
+.sl_table_list_body td { border-bottom: 1px solid #e7e7eb; padding: 5px; }
+
+/* Таблицы вывода навигации в отделе пользователя */
+.sl_table_navi { width: 100%; margin: 0 0 20px 0; }
+.sl_table_navi td {
+	padding: 3px;
+	text-align: center;
+	border: 1px solid #ebebee;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+.sl_table_navi td:hover { background-color: #f6f8fa; }
+
+/* Таблицы вывода материала в модулях */
+.sl_table_amount { width: 100%; }
+.sl_table_faq { width: 100%; margin: 0 0 20px 0; }
+
+/* Таблицы добавления материала в модулях */
+.sl_table_form { width: 100%; }
+.sl_table_form td { padding-bottom: 5px; }
+.sl_table_form td:first-child { width: 35%; }
+
+/* Таблицы блоков */
+.sl_table_block { width: 100%; }
+.sl_table_block td { padding-bottom: 5px; }
+
+/* Позиции содержания */
+.sl_right { text-align: right; }
+.sl_left { text-align: left; }
+.sl_center { text-align: center; margin-left: auto; margin-right: auto; }
+.sl_pos_right { float: right; }
+
+/* Центрирование содержания */
+.sl_pos_center { display: block; text-align: center; margin-left: auto; margin-right: auto; }
+
+/* Шкала загрузки Ajax */
+.sl_loading {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 73px;
+	height: 17px;
+	background: url(../images/misc/loading.gif) no-repeat;
+}
+
+/* Рейтинги */
+/* Стандартный рейтинг - Звездочки */
+.sl_rate { display: inline-block; cursor: pointer; }
+.sl_rate .sl_rate-num, .sl_rate .sl_urating { float: left; }
+.sl_urating, .sl_urating li div, .sl_urating li { background-image: url(../images/misc/sprite.png); text-indent: -9999px; }
+.sl_urating { list-style: none; margin: 0; padding: 0; width: 110px; height: 22px; position: relative; background-position: -133px -127px; }
+.sl_urating li { padding: 0; margin: 0; float: left; }
+.sl_urating li div { outline: none; display: block; width: 22px; height: 22px; background-position: -133px -149px; z-index: 2; position: absolute; }
+.sl_urating div.sl_out1 { left: 0; background: none; z-index: 3; }
+.sl_urating li div.sl_over1 { left: 0; width: 22px; cursor: pointer; }
+.sl_urating div.sl_out2 { left: 22px; background: none; z-index: 3; }
+.sl_urating li div.sl_over2 { left: 0; width: 44px; cursor: pointer; }
+.sl_urating div.sl_out3 { left: 44px; background: none; z-index: 3; }
+.sl_urating li div.sl_over3 { left: 0; width: 66px; cursor: pointer; }
+.sl_urating div.sl_out4 { left: 66px; background: none; z-index: 3; }
+.sl_urating li div.sl_over4 { left: 0; width: 88px; cursor: pointer; }
+.sl_urating div.sl_out5 { left: 88px; background: none; z-index: 3; }
+.sl_urating li div.sl_over5 { left: 0; width: 110px; cursor: pointer; }
+.sl_urating li.sl_crating { background-position: -133px -105px; position: absolute; height: 22px; display: block; z-index: 1; }
+.rate-box .sl_rate { float: left; margin-top: 2px; }
+
+/* Маленький рейтинг - Звездочки */
+.min-rate .sl_rate { float: none; margin: 0 auto; display: inline-block; }
+.min-rate .sl_urating { width: 80px; height: 16px; background-position: -323px -121px; }
+.min-rate .sl_urating li div { width: 16px; height: 16px; background-position: -323px -137px; }
+.min-rate .sl_urating div.sl_out1 { }
+.min-rate .sl_urating li div.sl_over1 { width: 16px;}
+.min-rate .sl_urating div.sl_out2 { left: 16px; }
+.min-rate .sl_urating li div.sl_over2 { width: 32px; }
+.min-rate .sl_urating div.sl_out3 { left: 32px; }
+.min-rate .sl_urating li div.sl_over3 { width: 48px; }
+.min-rate .sl_urating div.sl_out4 { left: 48px; }
+.min-rate .sl_urating li div.sl_over4 { width: 64px; }
+.min-rate .sl_urating div.sl_out5 { left: 64px; }
+.min-rate .sl_urating li div.sl_over5 { width: 80px; }
+.min-rate .sl_urating li.sl_crating { height: 16px; background-position: -323px -105px; }
+
+/* Рейтинг - Количесво голосов */
+.sl_rate-num {
+	height: 20px;
+	line-height: 20px;
+	padding: 2px 10px;
+	border: 1px solid #ebebee;
+	border-radius: 13px;
+	display: inline-block;
+	color: #b8c2cd;
+	position: relative;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.sl_rate-num:after, .sl_rate-num:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -6px;
+	margin-top: -8px;
+	border-right: 8px solid #ebebee;
+	border-top: 8px solid transparent;
+	border-left: 0 dotted;
+	border-bottom: 8px solid transparent;
+}
+.sl_rate-num:after { left: -5px; border-right-color: #fff; }
+.sl_rate-is.sl_rate-num { color: #fff; background: #a4d682; border-color: #a4d682; }
+.sl_rate-is.sl_rate-num:after, .sl_rate-is.sl_rate-num:before { border-right-color: #a4d682; }
+
+/* Рейтинг - Плюс и Минус */
+.rate-like-box:after { content: ""; display: block; clear: both; }
+.sl_rate-like { float: left; cursor: pointer; }
+.sl_rate-like p {
+	float: left;
+	width: 26px;
+	height: 26px;
+	background-image: url(../images/misc/sprite.png); 
+	text-indent: -9999px;
+	overflow: hidden;
+	margin-right: 4px;
+}
+.rate-like-box .sl_rate-num { margin-left: 6px; }
+.sl_rate-plus { background-position: -133px -196px; }
+.sl_rate-minus { background-position: -159px -196px; }
+.sl_rate-plus.sl_out:hover { background-position: -133px -222px; }
+.sl_rate-minus.sl_out:hover { background-position: -159px -222px; }
+
+/* Маленький рейтинг - Плюс и Минус */
+.min-rate .sl_rate-like p { position: absolute; margin: 0; width: 19px; height: 19px; }
+.min-rate .sl_rate-plus { right: 0; background-position: -185px -196px; }
+.min-rate .sl_rate-minus { left: 0; background-position: -204px -196px; }
+.min-rate .sl_rate-plus.sl_out:hover { background-position: -185px -215px; }
+.min-rate .sl_rate-minus.sl_out:hover { background-position: -204px -215px; }
+.min-rate .sl_rate-like { float: none; display: inline; }
+.min-rate .rate-like-box { position: relative; margin: 0 auto; display: block; padding: 0 22px; width: 30px; height: 19px; }
+.min-rate .rate-like-box .sl_rate-num { display: block; line-height: 17px; height: 17px; width: 28px; text-align: center; padding: 0; margin: 0; font-size: 11px; }
+.min-rate .rate-like-box .sl_rate-num:before, .min-rate .rate-like-box .sl_rate-num:after { display: none; }
+
+.fp-meta .min-rate .sl_rate-plus { background-position: -185px -234px; }
+.fp-meta .min-rate .sl_rate-minus { background-position: -204px -234px; }
+.fp-meta .min-rate .sl_rate-plus.sl_out:hover { background-position: -185px -253px; }
+.fp-meta .min-rate .sl_rate-minus.sl_out:hover { background-position: -204px -253px; }
+
+/* Оформление при наведении на кнопку Редактор */ 
+/* Menu */
+.sl_menu ul { list-style: none; padding: 0; margin: 0; }
+.sl_menu ul li { position: relative; }
+.sl_menu > ul > li > a, .sl_menu > ul > li, .sl_menu > ul, .sl_menu { float: left; }
+.sl_menu > ul > li > a {
+	border-radius: 15px;
+	line-height: 20px;
+	height: 20px;
+	padding: 5px 15px;
+	color: #556779;
+	text-decoration: none !important;
+	font-size: 1.15em;
+}
+.sl_menu > ul > li > a:hover, .sl_menu > ul > li:hover > a { color: #2a303c; background-color: #f2f4f7; }
+
+/* Submenu */
+.sl_menu ul ul {
+	position: absolute;
+	top: 10px;
+	margin-top: 30px;
+	padding: 13px 0;
+	border-radius: 13px;
+	min-width: 150px;
+	background-color: #2a303c;
+	color: #fff;
+	text-align: left;
+	z-index: 2001;
+	box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease;
+}
+.sl_menu ul ul:after {
+	content: "";
+	border-bottom: 8px solid #2a303c;
+	border-right: 8px solid transparent;
+	border-top: 0 dotted;
+	border-left: 8px solid transparent;
+	position: absolute;
+	left: 15px;
+	top: -8px;
+}
+.sl_menu ul ul a {
+	white-space: nowrap;
+	display: block;
+	color: #fff;
+	padding: 3px 15px;
+	text-decoration: none !important;
+}
+.sl_menu ul ul a:hover { background-color: #5eb7f3; }
+.sl_menu li:hover ul { top: 0; opacity: 1; visibility: visible; }
+
+/* Быстрый Ajax редактор */
+.sl_earea {
+	margin: 0 0 3px 0;
+	width: 100%;
+	overflow: auto;
+	resize: vertical;
+	background-color: #fff;
+	border: 1px solid #96d26d;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	border-radius: 4px;
+}
+.sl_earea:focus { border-color: #80b7e0; box-shadow: 0 1px 1px rgba(0,0,0,0.075) inset; outline: none; }
+
+/* Подпись пользователя */
+.sl_sig { color: #798086; font-family: Georgia, "Times New Roman", serif; font-style: italic; }
+
+/* Сообщение - Ошибка*/
+.sl_warn {
+	border-radius: 4px;
+	background: #fdf7eb;
+	color: #837a69;
+	padding: 18px 20px 18px 50px;
+	position: relative;
+	margin: 20px 0 20px 0;
+}
+.sl_warn:before {
+	width: 20px;
+	height: 20px;
+	background-position: -311px -16px;
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	margin-top: -10px;
+}
+.sl_warn a { color: #b96d3a; }
+
+/* Сообщение - Информация */
+.sl_info {
+	border-radius: 4px;
+	background: #ebfdf3;
+	color: #69836f;
+	padding: 18px 20px 18px 50px;
+	position: relative;
+	margin: 20px 0 20px 0;
+}
+.sl_info:before {
+	width: 20px;
+	height: 20px;
+	background-position: -323px -153px;
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	margin-top: -10px;
+}
+.sl_info a { color: #b96d3a; }
+
+/* Буквы алфавита в списке */
+.sl_letter {
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 14px;
+	width: 16px;
+	height: 16px;
+	padding: 1px;
+	line-height: 16px;
+	text-align: center;
+	margin: 0 0 5px 2px;
+	position: relative;
+	top: 0px;
+	border: 1px solid #000;
+	border-radius: 3px;
+}
+a .sl_letter { cursor: pointer; color: #64b1e1; border: 1px solid #64b1e1;}
+a .sl_letter:hover { background: #64b1e1; color: #fff; }
+
+/* Номер */
+.sl_num {
+	display: inline-block;
+	background-image: url(../images/misc/sprite.png);
+	text-align: left;
+	overflow: hidden;
+	text-indent: -9999px;
+	white-space: nowrap;
+}
+
+/* Подсказки title tips */
+.sl_tip {
+	position: relative;
+	display: inline-block;
+	background-image: url(../images/misc/sprite.png);
+	vertical-align: middle;
+	content: "";
+	cursor: help;
+	width: 16px;
+	height: 16px;
+	background-position: -336px -88px;
+	margin: -3px 6px 0 0;
+}
+.sl_tip div {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 100;
+	float: left;
+	min-width: 260px;
+	padding: 15px;
+	margin: 2px 0 0 0;
+	list-style: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0, 0.15);
+	border-radius: 6px;
+	box-shadow: 0 6px 12px rgba(0,0,0, 0.175);
+	background-clip: padding-box;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .5s ease;
+}
+.sl_tip:hover > div { top: 0; opacity: 1; visibility: visible; }
+
+/* Секретный код - Captcha */
+img.sl_s_capt { cursor: pointer; background-color: #fff; border: 1px solid #ccc; border-radius: 3px; }
+input.sl_s_capt { width: 148px; }
+img.sl_k_capt { cursor: pointer; background-color: #fff; border: 1px solid #ccc; border-radius: 3px; }
+input.sl_k_capt { width: 148px; }
+
+/* Аватар */
+.sl_avatar {
+	display: inline-block;
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Изображение предварительного просмотра */
+.sl_preview_mini {
+	cursor: pointer;
+	display: block;
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: all 0.5s;
+}
+.sl_preview_mini:hover { width: 64px; height: 64px; border-radius: 30px; }
+
+/* Подсветка поискового слова */
+.sl_word { color: #ff0000; background-color: #ffff00; }
+
+/* Открывающееся окна, подсказки, формы */
+.sl_drop { position: relative; }
+.sl_drop-form {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 150px;
+	padding: 15px;
+	margin: 2px 0 0;
+	list-style: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0, 0.15);
+	border-radius: 6px;
+	box-shadow: 0 6px 12px rgba(0,0,0, 0.175);
+	background-clip: padding-box;
+}
+
+/* Изображения опубликованные через BB Редактор */
+.sl_img { margin: 0 5px 0 0; border-radius: 5px; }
+
+/* Многоуровневые нумерованные списки карты сайта */
+.sl_list, .sl_sublist, .sl_sublist_two { margin: 0; padding: 0; counter-reset: li; list-style: none; }
+.sl_list li:before {
+	counter-increment: li;
+	content: counters(li, ".") ". ";
+	padding: 5px 0;
+	display: inline-block;
+	margin-right: 5px;
+	border-radius: 15px;
+	color: #fff;
+	text-align: center;
+	width: 70px;
+}
+.sl_list a {
+	display: inline-block;
+	padding: 5px;
+	text-decoration: none;
+	color: #556779;
+	margin: 2px 0;
+}
+ol.sl_list li:before { background: #65486c; }
+ol.sl_sublist li:before { background: #7282a3; box-shadow: 15px 0 0 #97a8c2; margin-right: 20px; transition: .5s linear; }
+ol.sl_sublist li:hover:before { box-shadow: none; margin-right: 5px; }
+ol.sl_sublist_two li:before { background: #b9aca6; box-shadow: 15px 0 0 #cebeb1, 30px 0 0 #d9c9bc; margin-right: 35px; transition: .5s linear; }
+ol.sl_sublist_two li:hover:before { box-shadow: none; margin-right: 5px; }

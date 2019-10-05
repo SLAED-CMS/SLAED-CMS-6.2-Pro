@@ -1,0 +1,2 @@
+ALTER TABLE `{pref}_users` CHANGE `user_warnings` `user_warnings` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+ALTER TABLE `{pref}_clients` CHANGE `info` `info` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '';
