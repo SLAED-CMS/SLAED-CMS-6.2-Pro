@@ -4,8 +4,6 @@
 > + License: GNU GPL 3
 > + Website: https://slaed.net
 
-----
-
 #### Minimum requirements
 
 The minimum requirements for the correct operation of the system are installed on your hosting or server programs: PHP 4.3 or higher, MySQL 4 or higher.
