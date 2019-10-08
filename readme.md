@@ -6,7 +6,7 @@
 
 #### Minimum requirements
 
-The minimum requirements for the correct operation of the system are installed on your hosting or server programs: PHP 4.3 or higher, MySQL 4 or higher.
+The minimum requirements for the correct operation of the system are installed on your hosting or server programs: PHP 5 or higher, MySQL 5 or higher.
 
 #### System installation
 
