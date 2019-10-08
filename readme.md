@@ -1,11 +1,10 @@
-____
-
 > + Version: SLAED CMS 6.2 Pro
 > + Author: Eduard Laas
 > + Copyright © 2005 - 2019 SLAED
 > + License: GNU GPL 3
 > + Website: https://slaed.net
-____
+
+----
 
 #### Minimum requirements
 
@@ -28,6 +27,6 @@ The minimum requirements for the correct operation of the system are installed o
 
 If you have any difficulties or problems with the system installation, we recommend that you contact our support team, please feel free to ask on the developing SLAED CMS forum in https://slaed.net
 
-____
+----
 
 Have a nice job!
